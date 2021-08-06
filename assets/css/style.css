@@ -1,0 +1,160 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0.2rem;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html{
+  --dark-background: #181818;
+  --medium-background: #29292E;
+  --red: #ce8893;
+  --blue: #7295ca;
+  --green: #6caf8a;
+  --light-text: #E1E1E6;
+  --medium-text: #a8a8b3;
+  --comfort-text: #F6F1D1;
+
+  /*1rem = 16px (User agent) = 100% (User agent)*/
+  font-size: 62.5%; /*10px*/
+}
+
+body{
+  background: var(--dark-background);
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.todo-list {
+  font-family: "Space Mono", monospace;
+  padding: 1rem;
+  margin-top: min(5rem, 5%);
+  width: min(80rem, 100%);
+}
+
+.title {
+  border-bottom: 1px solid rgba(246, 241, 209, 0.5);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "BioRhyme", serif;
+  color: var(--comfort-text);
+}
+
+.form {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.form-input,
+.form-button {
+  border-radius: 0;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.form-input {
+  margin-right: 0.25rem;
+  outline: none;
+  background-color: var(--comfort-text);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-input:nth-child(1) {
+    width: min(40rem, 100%);
+}
+
+.form-button {
+  border: 1px;
+  background: var(--comfort-text);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  color: var(--comfort-text);
+  background: rgba(246, 241, 209, 0.1);
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.task {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--comfort-text);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  padding: 1rem 3rem;
+}
+.check-button{
+  background: var(--green);
+  margin: auto 0;
+}
+
+.delete-button{
+  background: var(--red);
+  margin: auto 0 auto 0.25rem;
+}
+.check-button, .delete-button {
+  padding: 0.5rem;
+  height: min(10rem, 5%);
+  border: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.task.done .check-button {
+  background: var(--medium-background);
+  color: var(--medium-text);
+}
+
+.check-icon {
+  display: block;
+  padding: 1px;
+  width: 1rem;
+  height: 1rem;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.task.done .check-icon {
+  background-color: var(--medium-background);
+}
+
+.task p{
+  width: min(80rem, 80%);
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.content {
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.task.done .content {
+  text-decoration: line-through;
+}
+
+.content-date {
+  color: var(--comfort-text);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem 3.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
